@@ -5,7 +5,10 @@
         
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <title>This week at the Mount <!--*|MC:SUBJECT|*--></title>
+        <!-- Facebook sharing information tags -->
+        <meta property="og:title" content="*|MC:SUBJECT|*">
+        
+        <title>This Week at the Mount</title>
 		
 		<style type="text/css">
 			#outlook a{
@@ -89,7 +92,7 @@
 		@style heading 3
 		*/
 			h3,.h3{
-				/*@editable*/color:#00adf0;
+				/*@editable*/color:#025193;
 				display:block;
 				/*@editable*/font-family:Helvetica;
 				/*@editable*/font-size:12px;
@@ -201,7 +204,7 @@
 	@tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
 	@theme footer
 	*/
-		.footerContent{
+		.footerContent p{
 			/*@editable*/color:#333333;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:10px;
@@ -240,11 +243,26 @@
 			font-size: 24px;
 			line-height: 150%;
 		}
+		@media (max-width: 600px) {
+			.container{ 
+				width:100%;
+				max-width:600px;
+				margin:0 auto;
+			}
+		}
+		
+		@media (max-width: 620px) {
+			.wider-container{ 
+				width:100%;
+				max-width:620px;
+				margin:0 auto;
+			}
+		}
 		</style>
 	
 	</head>
 	
-	<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="-webkit-text-size-adjust: none;margin: 0;padding: 0;background-color:#6e8fbf;width: 100% !important;">
+	<body style="-webkit-text-size-adjust: none;margin: 0;padding: 0;background-color:#6e8fbf;width: 100% !important;">
     	
     	<center>
     	
@@ -258,7 +276,7 @@
    							<tr>
                             	<td align="center" valign="top" id="templateHeader" style="background-color: #6e8fbf;">
                                     <!-- // Begin Template Header \\ -->
-                                	<table border="0" cellpadding="0" cellspacing="0" width="620" style="width:620px;width:100%;max-width:620px;display:block;">
+                                	<table class="wider-container" border="0" cellpadding="0" cellspacing="0" width="620">
                                         <tr>
                                             <td class="headerContent">
                                             	<img src="header.png" width="620" style="max-width:100%;">
@@ -271,11 +289,11 @@
                             <tr>
                             	<td align="center" valign="top">
                                     <!-- // Begin Template Body \\ -->
-                                	<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody" style="background-color:#fffddd;">
+                                	<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody" style="margin:0;padding:0;background-color:#fffddd;">
                             			
                             			<tr>
                                             <td align="center" valign="top" style="padding-top:40px; padding-bottom:40px;">
-                                            	<table border="0" cellpadding="0" cellspacing="0" width="600" style="width:600px;width:100%;max-width:600px;display:block;">
+                                            	<table class="container" border="0" cellpadding="0" cellspacing="0" width="600">
                                             		<tr>
                                             			<td valign="top" class="bodyContent" style="padding-bottom:20px;border-bottom: solid 3px #f89822;">
                                                         	<div>
@@ -321,7 +339,7 @@
     			<tr>
                     <td align="center" valign="top" id="templateFooter" style="padding-top:40px; padding-bottom:40px;background-color:#fde79d;border-top: solid 4px #095597;">
                         <!-- // Begin Template Footer \\ -->
-                        <table border="0" cellpadding="0" cellspacing="0" width="600" style="width:600px;width:100%;max-width:600px;display:block;">
+                        <table class="container"  border="0" cellpadding="0" cellspacing="0" width="600">
                             <tr>
                                 <td valign="top" class="footerContent">
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -341,7 +359,7 @@
 												</table><!-- /column 1 -->	
 												
 												<!-- column 2 -->
-												<table align="left" class="column" border="0" cellpadding="0" cellspacing="0" style="width:379px;padding-bottom:20px;">
+												<table align="left" class="column" border="0" cellpadding="0" cellspacing="0" style="width:63%;padding-bottom:20px;">
 													<tr>
 														<td>				
 																						
@@ -396,13 +414,13 @@
     			<tr>
                     <td align="center" valign="top" id="footerDetail" style="padding-bottom:40px;">
                         <!-- // Begin Footer Detail \\ -->
-                        <table border="0" cellpadding="0" cellspacing="0" width="620" style="width:620px;width:100%;max-width:620px;display:block;">
+                        <table class="wider-container" border="0" cellpadding="0" cellspacing="0" width="620">
                             <tr>
                                 <td valign="top" class="footerContent">
                                     <table border="0" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td valign="top">
-                                                <img src="footer.png" width="600" style="max-width:100%;">
+                                                <img src="footer.png" width="620" style="max-width:100%;">
                                             </td>
                                         </tr>
                                     </table>
