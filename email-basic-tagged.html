@@ -8,7 +8,7 @@
         <!-- Facebook sharing information tags -->
         <meta property="og:title" content="*|MC:SUBJECT|*">
         
-        <title>This Week at the Mount</title>
+        <title>*|MC:SUBJECT|*</title>
 		
 		<style type="text/css">
 			#outlook a{
@@ -56,9 +56,9 @@
 				display:block;
 				text-transform: uppercase;
 				/*@editable*/font-family:Helvetica;
-				/*@editable*/font-size:16px;
+				/*@editable*/font-size:18px;
 				/*@editable*/font-weight:bold;
-				/*@editable*/line-height:100%;
+				/*@editable*/line-height:150%;
 				margin-top:0;
 				margin-right:0;
 				margin-bottom:0;
@@ -76,9 +76,9 @@
 				display:block;
 				text-transform: uppercase;
 				/*@editable*/font-family:Helvetica;
-				/*@editable*/font-size:14px;
+				/*@editable*/font-size:16px;
 				/*@editable*/font-weight:bold;
-				/*@editable*/line-height:100%;
+				/*@editable*/line-height:150%;
 				margin-top:0;
 				margin-right:0;
 				margin-bottom:10px;
@@ -95,9 +95,9 @@
 				/*@editable*/color:#025193;
 				display:block;
 				/*@editable*/font-family:Helvetica;
-				/*@editable*/font-size:12px;
+				/*@editable*/font-size:14px;
 				/*@editable*/font-weight:bold;
-				/*@editable*/line-height:100%;
+				/*@editable*/line-height:150%;
 				margin-top:0;
 				margin-right:0;
 				margin-bottom:10px;
@@ -117,7 +117,7 @@
 				/*@editable*/font-family:Helvetica;
 				/*@editable*/font-size:12px;
 				/*@editable*/font-weight:normal;
-				/*@editable*/line-height:100%;
+				/*@editable*/line-height:150%;
 				margin-top:0;
 				margin-right:0;
 				margin-bottom:10px;
@@ -204,7 +204,8 @@
 	@tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
 	@theme footer
 	*/
-		.footerContent p{
+		.footerContent p,
+		.footerContent .vcard {
 			/*@editable*/color:#333333;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:10px;
@@ -236,18 +237,22 @@
 		.post {
 			border-top:solid 1px #f89822; 
 		}
-
-		.postTitle {
-			color:#025193;
-			text-transform: none;
-			font-size: 24px;
-			line-height: 150%;
+		
+		.container div img {
+			max-width:100%;
+			margin-top:8px;
+			height: auto !important;
 		}
+		
 		@media (max-width: 600px) {
 			.container{ 
 				width:100%;
 				max-width:600px;
 				margin:0 auto;
+				padding-left: 5px;
+			}
+			.column {
+				width:100% !important;
 			}
 		}
 		
@@ -297,32 +302,20 @@
                                             		<tr>
                                             			<td valign="top" class="bodyContent" style="padding-bottom:20px;border-bottom: solid 3px #f89822;">
                                                         	<div>
-                                                                <h1>This Week at the Mount</h1>
-                                                            	<p>Your weekly digest of news at the College of Mount St. Joseph, delivered to your email inbox.</p>
+                                                                <h1>*|MC:SUBJECT|*</h1>
+                                                                <img mc:edit="header_image" mc:allowdesigner="" mc:hideable />
+                                                            	<p mc:edit="std_preheader_content">Your weekly digest of news at the College of Mount St. Joseph, delivered to your email inbox.</p>
                                                             </div>
                                                         </td>
                                             		</tr>
-                                            		<tr>
+                                            		<tr mc:repeatable>
                                             			<td valign="top" class="bodyContent post" style="padding-top:30px;padding-bottom:20px;">
                                                         	<div>
-                                                                <h1 class="postTitle">Mount professor's latest science book for teens</h1>
-                                                                <h2 class="postCategory">Press Releases</h2>
-                                                                <h3 class="postDate">Posted 12.06.2012</h3>
-                                                            	<p class="postContent">Beth Murray's "Forensic Identification" recognized by National Science Teachers Association. <a href="#" title="read more" class="readMore">read more</a></p>
+                                                                <h1 class="postTitle" mc:edit="post_title">Mount professor's latest science book for teens</h1>
+                                                            	<div class="postContent" mc:edit="post_content">Beth Murray's "Forensic Identification" recognized by National Science Teachers Association. <a href="#" title="read more" class="readMore">read more</a></div>
                                                             </div>
                                                         </td>
                                             		</tr>
-                                            		<tr>
-                                            			<td valign="top" class="bodyContent post" style="padding-top:30px;padding-bottom:20px;">
-                                                        	<div>
-                                                                <h1 class="postTitle">Mount students to help rebuild homes in New Orleans</h1>
-                                                                <h2 class="postCategory">Press Releases</h2>
-                                                                <h3 class="postDate">Posted 12.06.2012</h3>
-                                                            	<p class="postContent">They will hold a bake sale on Thurs., Dec. 6 to raise money for the trip. <a href="#" title="read more" class="readMore">read more</a></p>
-                                                            </div>
-                                                        </td>
-                                            		</tr>
-                                            	
                                             	</table>
                                             </td>
                                         </tr>    
@@ -359,16 +352,12 @@
 												</table><!-- /column 1 -->	
 												
 												<!-- column 2 -->
-												<table align="left" class="column" border="0" cellpadding="0" cellspacing="0" style="width:63%;padding-bottom:20px;">
+												<table align="left" class="column" border="0" cellpadding="0" cellspacing="0" style="width:59%;padding-bottom:20px;">
 													<tr>
 														<td>				
 																						
-															<p><a href="http://www.msj.edu">College of Mount St. Joseph</a><br/>
-															5701 Delhi Road</br>
-															Cincinnati, OH 45233</br> 
-															Toll free: 1-800-654-9314</p>
-															<p>© 2012 College of Mount St. Joseph,</br>
-															All rights reserved.</p>
+															<p>© *|CURRENT_YEAR|* <a href="*|LIST:URL|*">*|LIST:COMPANY|*</a> All rights reserved.</p>
+															*|HTML:LIST_ADDRESS_HTML|*
 			                
 														</td>
 													</tr>
@@ -398,7 +387,12 @@
 										<tr>
 											<td>				
 																			
-												<p><a href="#">Non-discrimination policy</a> <span class="sep" style="color:#fe991a;">|</span> <a href="#">Forward to a friend</a> <span class="sep" style="color:#fe991a;">|</span> <a href="#">Unsubscribe</a> <span class="sep" style="color:#fe991a;">|</span> <a href="#">Update subscription preferences</a> <span class="sep" style="color:#fe991a;">|</span> <a href="#">View in browser</p>
+												<p><a href="http://www.msj.edu/non-discrimination-policy/" title="Non-discrimination policy">Non-discrimination policy</a> <span class="sep" style="color:#fe991a;">|</span> 
+												<a href="*|FORWARD|*" title="Forward to a friend">Forward to a friend</a> <span class="sep" style="color:#fe991a;">|</span> 
+												<a href="*|UNSUB|*" title="Unsubscribe">Unsubscribe</a> <span class="sep" style="color:#fe991a;">|</span> 
+												<a href="*|UPDATE_PROFILE|*" title="Update subscription preferences">Update subscription preferences</a> <span class="sep" style="color:#fe991a;">|</span> 
+												<a href="*|ARCHIVE|*" title="View email in browser">View in browser</p>
+												<p>*|LIST:DESCRIPTION|*</p>
 
 
                 
